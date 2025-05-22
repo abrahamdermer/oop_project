@@ -14,8 +14,7 @@ namespace oop_project
 
         public Artillery560M()
         {
-            TypesOfGoals.Add("Human");
-            TypesOfGoals.Add("Vehicle");
+            TypesOfGoals.Add("Open space");
         }
     }
 }

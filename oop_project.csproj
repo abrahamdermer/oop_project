@@ -44,6 +44,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractAttackTool.cs" />
+    <Compile Include="Artillery560M.cs" />
+    <Compile Include="F16_Plane.cs" />
+    <Compile Include="Hermes_460.cs" />
     <Compile Include="IAttackTool.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

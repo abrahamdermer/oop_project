@@ -46,6 +46,7 @@
     <Compile Include="AbstractAttackTool.cs" />
     <Compile Include="Analyzer.cs" />
     <Compile Include="Artillery560M.cs" />
+    <Compile Include="Controler.cs" />
     <Compile Include="F16_Plane.cs" />
     <Compile Include="Hamas.cs" />
     <Compile Include="Hermes_460.cs" />

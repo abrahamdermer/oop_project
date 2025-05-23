@@ -45,5 +45,8 @@ namespace oop_project
             Weapons.Add(weapon);
         }
 
+
+        public string Tostring() => $"name:{Name}, ";
+
     }
 }

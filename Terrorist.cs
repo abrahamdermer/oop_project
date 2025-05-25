@@ -15,7 +15,8 @@ namespace oop_project
         public int Rank { get; private set; }
         public bool InLive { get; private set; }
         public List<string> Weapons { get; private set; }
-        
+        public int RiskRating { get; private set; } = 0;
+
 
         public  Terrorist(string name , int rank)
         {
@@ -42,11 +43,33 @@ namespace oop_project
 
         public void AddWeapon(string weapon)
         {
-            Weapons.Add(weapon);
+            switch (weapon)
+            {
+                case "Knife":
+                    RiskRating += 1* Rank;
+                    Weapons.Add(weapon);
+                    break;
+                case "Pistol":
+                    RiskRating += 2 * Rank;
+                    Weapons.Add(weapon);
+                    break;
+                case "MK47":
+                    RiskRating += 3 * Rank;
+                    Weapons.Add(weapon);
+                    break;
+                case "M16":
+                    RiskRating += 3 * Rank;
+                    Weapons.Add(weapon);
+                    break;
+                case "RPG":
+                    RiskRating += 4 * Rank;
+                    Weapons.Add(weapon);
+                    break;
+            }
         }
 
 
-        public string Tostring() => $"name:{Name}, ";
+        public  override string ToString() => $"name: {Name} | Rick rating: {RiskRating}, Rank: {Rank},";
 
     }
 }

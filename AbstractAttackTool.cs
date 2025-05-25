@@ -62,6 +62,9 @@ namespace oop_project
         }
 
 
+        public override string ToString() => $"type: {GetType().Name} | Capacity:{Capacity}, fuel: {Fuel}, Type of goals - [{ string.Join(",",TypesOfGoals)}]";
+        
+
 
     }
 }

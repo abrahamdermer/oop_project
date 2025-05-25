@@ -33,13 +33,23 @@ namespace oop_project
             return terrorist ;
         }
 
-        public static Terrorist GetPreferredTerrorist()
+
+
+        public static Terrorist GetPreferredTerrorist(List<Terrorist> terrorists)
         {
-            throw new NotImplementedException();
-
+            if (terrorists.Count < 1)
+                return null;
+            Terrorist terrorist = terrorists[0];
+            int maxRating = terrorist.RiskRating;
+            foreach (Terrorist ter in terrorists)
+            {
+                if(ter.RiskRating > maxRating)
+                {
+                    terrorist = ter;
+                    maxRating = ter.RiskRating;
+                }
+            }
+            return terrorist;
         }
-
-        
-
     }
 }

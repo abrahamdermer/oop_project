@@ -22,7 +22,7 @@ namespace oop_project
             return input;
         }
 
-        public static void Activer(string input,IDF idf)
+        public static void Activer(string input,IDF idf,Hamas hamas)
         {
             switch (input)
             {
@@ -37,6 +37,8 @@ namespace oop_project
                     }
                     break;
                 case "3":
+                    Terrorist ter2 = Analyzer.GetPreferredTerrorist(hamas.arms);
+                    Console.WriteLine((ter2 != null ? ter2.ToString() : "null"));
                     break;
                 case "4":
                     break;

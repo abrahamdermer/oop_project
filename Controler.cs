@@ -12,11 +12,13 @@ namespace oop_project
         {
             string input;
            
-            Console.WriteLine("תכניס את הבחירה שלך:" +
-            "\n1 בשביל לקבל את המחבל עם הכי הרבה דוחות" +
-            "\n2 לקבלת אפשרויות תקיפה זמינות" +
-            "\n3 המחבל אם הדרוג הגבוה ביותר\n4 פקודת תקיפה " +
-            "\n-1 exit");
+            Console.WriteLine("Please enter your choice:" +
+                "\n1 - Show the terrorist with the most reports" +
+                "\n2 - Display available attack tools" +
+                "\n3 - Show the highest-ranked terrorist" +
+                "\n4 - Issue attack command" +
+                "\n-1 - Exit"
+                );
 
             input = Console.ReadLine();
             return input;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace oop_project
 {
+    enum WeaponsTypes { Knife, Pistol , MK47 , M16 = 2 , RPG = 3 }
     internal class Terrorist
     {
         private const int DEFAULT_RANK = 1;
@@ -14,8 +15,10 @@ namespace oop_project
         public string Name { get; set; }
         public int Rank { get; private set; }
         public bool InLive { get; private set; }
-        public List<string> Weapons { get; private set; }
-        public int RiskRating { get; private set; } = 0;
+        public List<WeaponsTypes> Weapons { get; private set; }
+        public int RiskRating => RiskPoints * Rank;
+
+        private int RiskPoints = 0;
 
 
         public  Terrorist(string name , int rank)
@@ -26,7 +29,7 @@ namespace oop_project
             else
                 Rank = DEFAULT_RANK;
             InLive = true;
-            Weapons = new List<string>();
+            Weapons = new List<WeaponsTypes>();
 
         }
 
@@ -41,31 +44,10 @@ namespace oop_project
             InLive = false;
         }
 
-        public void AddWeapon(string weapon)
+        public void AddWeapon(WeaponsTypes weapon)
         {
-            switch (weapon)
-            {
-                case "Knife":
-                    RiskRating += 1* Rank;
-                    Weapons.Add(weapon);
-                    break;
-                case "Pistol":
-                    RiskRating += 2 * Rank;
-                    Weapons.Add(weapon);
-                    break;
-                case "MK47":
-                    RiskRating += 3 * Rank;
-                    Weapons.Add(weapon);
-                    break;
-                case "M16":
-                    RiskRating += 3 * Rank;
-                    Weapons.Add(weapon);
-                    break;
-                case "RPG":
-                    RiskRating += 4 * Rank;
-                    Weapons.Add(weapon);
-                    break;
-            }
+            Weapons.Add(weapon);
+            RiskPoints += (int)weapon +1;
         }
 
 
